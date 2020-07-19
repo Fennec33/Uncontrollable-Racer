@@ -6,18 +6,44 @@ public class SpeederMovement : MonoBehaviour
 {
     [SerializeField] private Rigidbody2D rb;
 
-    public void Accelerate()
+    [SerializeField] private float forwardSpeed;
+    [SerializeField] private float turnSpeed;
+
+    public bool IsAccelerating { private get; set; }
+    public bool IsBreaking { private get; set; }
+    public bool IsTurning { private get; set; }
+    public float TurnDirection { private get; set; }
+
+    private void FixedUpdate()
     {
-        Debug.Log("Accelerating");
+        if (IsAccelerating)
+        {
+            Accelerate();
+        }
+
+        if (IsBreaking)
+        {
+            Break();
+        }
+
+        if (IsTurning)
+        {
+            Turn();
+        }
     }
 
-    public void Break()
+    private void Accelerate()
     {
-        Debug.Log("Breaking");
+        transform.position += Time.deltaTime * forwardSpeed * transform.up;
     }
 
-    public void Turn(float direction)
+    private void Break()
     {
-        Debug.Log("Turning " + direction);
+        transform.position += Time.deltaTime * -forwardSpeed * transform.up;
+    }
+
+    private void Turn()
+    {
+        transform.Rotate(Time.deltaTime * turnSpeed * TurnDirection * Vector3.back);
     }
 }

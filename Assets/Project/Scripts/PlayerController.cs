@@ -9,6 +9,10 @@ public class PlayerController : MonoBehaviour
 
     private InputMaster _controlls;
 
+    private bool _accelerating;
+    private bool _breaking;
+    private bool _turning;
+
     private void Awake()
     {
         _controlls = new InputMaster();
@@ -16,40 +20,64 @@ public class PlayerController : MonoBehaviour
 
     private void OnEnable()
     {
-        _controlls.Player.Accelerate.performed += Accelerate;
+        _controlls.Player.Accelerate.performed += AccelerateOn;
+        _controlls.Player.Accelerate.canceled += AccelerateOff;
         _controlls.Player.Accelerate.Enable();
 
-        _controlls.Player.Break.performed += Break;
+        _controlls.Player.Break.performed += BreakOn;
+        _controlls.Player.Break.canceled += BreakOff;
         _controlls.Player.Break.Enable();
 
-        _controlls.Player.Turn.performed += Turn;
+        _controlls.Player.Turn.performed += TurnOn;
+        _controlls.Player.Turn.canceled += TurnOff;
         _controlls.Player.Turn.Enable();
     }
 
     private void OnDisable()
     {
-        _controlls.Player.Accelerate.performed -= Accelerate;
+        _controlls.Player.Accelerate.performed -= AccelerateOn;
+        _controlls.Player.Accelerate.canceled -= AccelerateOff;
         _controlls.Player.Accelerate.Disable();
 
-        _controlls.Player.Break.performed -= Break;
+        _controlls.Player.Break.performed -= BreakOn;
+        _controlls.Player.Break.canceled -= BreakOff;
         _controlls.Player.Break.Disable();
 
-        _controlls.Player.Turn.performed -= Turn;
+        _controlls.Player.Turn.performed -= TurnOn;
+        _controlls.Player.Turn.canceled -= TurnOff;
         _controlls.Player.Turn.Disable();
     }
 
-    private void Accelerate(InputAction.CallbackContext context)
+    private void AccelerateOn(InputAction.CallbackContext context)
     {
-        speeder.Accelerate();
+        speeder.IsAccelerating = true;
     }
 
-    private void Break(InputAction.CallbackContext context)
+    private void AccelerateOff(InputAction.CallbackContext context)
     {
-        speeder.Break();
+        speeder.IsAccelerating = false;
     }
 
-    private void Turn(InputAction.CallbackContext context)
+    private void BreakOn(InputAction.CallbackContext context)
     {
-        speeder.Turn(context.ReadValue<float>());
+        speeder.IsBreaking = true;
     }
+
+    private void BreakOff(InputAction.CallbackContext context)
+    {
+        speeder.IsBreaking = false;
+    }
+
+    private void TurnOn(InputAction.CallbackContext context)
+    {
+        speeder.TurnDirection = context.ReadValue<float>();
+        speeder.IsTurning = true;
+    }
+
+    private void TurnOff(InputAction.CallbackContext context)
+    {
+        speeder.IsTurning = false;
+    }
+
+
 }

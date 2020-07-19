@@ -58,16 +58,6 @@ public class PlayerController : MonoBehaviour
         speeder.IsAccelerating = false;
     }
 
-    private void BreakOn(InputAction.CallbackContext context)
-    {
-        speeder.IsBreaking = true;
-    }
-
-    private void BreakOff(InputAction.CallbackContext context)
-    {
-        speeder.IsBreaking = false;
-    }
-
     private void TurnOn(InputAction.CallbackContext context)
     {
         speeder.TurnDirection = context.ReadValue<float>();
@@ -79,5 +69,13 @@ public class PlayerController : MonoBehaviour
         speeder.IsTurning = false;
     }
 
+    private void BreakOn(InputAction.CallbackContext context)
+    {
+        speeder.StartBreaking();
+    }
 
+    private void BreakOff(InputAction.CallbackContext context)
+    {
+        speeder.StopBreaking();
+    }
 }

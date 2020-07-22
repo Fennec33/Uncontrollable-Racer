@@ -11,16 +11,16 @@ public class SpeederHeightChanger : MonoBehaviour
 
     public void SetHeightHigh()
     {
-        lowCollider.SetActive(false);
         highCollider.SetActive(true);
+        lowCollider.SetActive(false);
 
         renderer.sortingOrder = 20;
     }
 
     public void SetHeightLow()
     {
-        highCollider.SetActive(false);
         lowCollider.SetActive(true);
+        highCollider.SetActive(false);
 
         renderer.sortingOrder = 10;
     }

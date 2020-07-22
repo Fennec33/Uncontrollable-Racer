@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class SpeederMovement : MonoBehaviour
 {
-    [SerializeField] private float forwardSpeed = 10f;
-    [SerializeField] private float breakForce =2.5f;
-    [SerializeField] private float turnSpeed = 120f;
+    [SerializeField] private float forwardSpeed = 50f;
+    [SerializeField] private float breakForce =2f;
+    [SerializeField] private float turnSpeed = 150f;
 
     private Rigidbody2D _rigidbody;
 

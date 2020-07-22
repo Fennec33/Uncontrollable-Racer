@@ -212,6 +212,7 @@ GameObject:
   m_Component:
   - component: {fileID: 32412303}
   - component: {fileID: 32412304}
+  - component: {fileID: 32412305}
   m_Layer: 0
   m_Name: TrackTriggerLow2
   m_TagString: Untagged
@@ -251,6 +252,19 @@ EdgeCollider2D:
   m_Points:
   - {x: -2.834303, y: 16.858604}
   - {x: -8.29632, y: 16.82793}
+--- !u!114 &32412305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 32412302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c37a228e9c564441be9c9c21718e4f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  highTrigger: 0
 --- !u!1 &35708771
 GameObject:
   m_ObjectHideFlags: 0
@@ -607,6 +621,7 @@ GameObject:
   m_Component:
   - component: {fileID: 214749302}
   - component: {fileID: 214749303}
+  - component: {fileID: 214749304}
   m_Layer: 0
   m_Name: TrackTriggerHigh2
   m_TagString: Untagged
@@ -646,6 +661,19 @@ EdgeCollider2D:
   m_Points:
   - {x: -9.895285, y: 10.236823}
   - {x: -9.884197, y: 15.78061}
+--- !u!114 &214749304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 214749301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c37a228e9c564441be9c9c21718e4f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  highTrigger: 1
 --- !u!1 &261840743
 GameObject:
   m_ObjectHideFlags: 0
@@ -953,50 +981,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &335098710
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 335098712}
-  - component: {fileID: 335098711}
-  m_Layer: 0
-  m_Name: PlayerController
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &335098711
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 335098710}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f29ab71efd87c5a4994ed084820b5e7c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speeder: {fileID: 1712700352}
---- !u!4 &335098712
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 335098710}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &367823023
 GameObject:
   m_ObjectHideFlags: 0
@@ -1088,6 +1072,7 @@ GameObject:
   m_Component:
   - component: {fileID: 369420645}
   - component: {fileID: 369420646}
+  - component: {fileID: 369420647}
   m_Layer: 0
   m_Name: TrackTriggerLow1
   m_TagString: Untagged
@@ -1127,6 +1112,19 @@ EdgeCollider2D:
   m_Points:
   - {x: -2.834303, y: 16.858604}
   - {x: -8.29632, y: 16.82793}
+--- !u!114 &369420647
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 369420644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c37a228e9c564441be9c9c21718e4f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  highTrigger: 0
 --- !u!1 &498001134
 GameObject:
   m_ObjectHideFlags: 0
@@ -1942,7 +1940,7 @@ Transform:
   - {fileID: 720302625}
   - {fileID: 1705683553}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &825574908
 GameObject:
@@ -2661,7 +2659,7 @@ Transform:
   m_Children:
   - {fileID: 134832601}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1248089006
 GameObject:
@@ -3345,45 +3343,12 @@ Transform:
   m_Father: {fileID: 781877916}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1712700350 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1187864570418684804, guid: 160522abf47fded47a1d82181adae67c,
-    type: 3}
-  m_PrefabInstance: {fileID: 1187864572129073210}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1712700351 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1187864570418684805, guid: 160522abf47fded47a1d82181adae67c,
     type: 3}
   m_PrefabInstance: {fileID: 1187864572129073210}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1712700352 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1187864570418684922, guid: 160522abf47fded47a1d82181adae67c,
-    type: 3}
-  m_PrefabInstance: {fileID: 1187864572129073210}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1712700350}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16165e181b61b1444876529a76397fae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1712700353
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1712700350}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f92cb71d92fc5a40b81fd2642b94575, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lowCollider: {fileID: 0}
-  highCollider: {fileID: 0}
-  renderer: {fileID: 0}
 --- !u!1 &1787836226
 GameObject:
   m_ObjectHideFlags: 0
@@ -3556,6 +3521,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1821811937}
   - component: {fileID: 1821811938}
+  - component: {fileID: 1821811939}
   m_Layer: 0
   m_Name: TrackTriggerHigh1
   m_TagString: Untagged
@@ -3595,6 +3561,19 @@ EdgeCollider2D:
   m_Points:
   - {x: -9.996639, y: 9.594915}
   - {x: -9.884197, y: 15.78061}
+--- !u!114 &1821811939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1821811936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c37a228e9c564441be9c9c21718e4f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  highTrigger: 1
 --- !u!1 &1879591454
 GameObject:
   m_ObjectHideFlags: 0
@@ -4018,7 +3997,7 @@ PrefabInstance:
     - target: {fileID: 1187864570418684805, guid: 160522abf47fded47a1d82181adae67c,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1187864570418684805, guid: 160522abf47fded47a1d82181adae67c,
         type: 3}

@@ -8,6 +8,9 @@ public class SpeederHeightChanger : MonoBehaviour
     [SerializeField] private GameObject highCollider;
 
     [SerializeField] private SpriteRenderer renderer;
+    [SerializeField] private SpriteRenderer flameMain;
+    [SerializeField] private SpriteRenderer flameLeft;
+    [SerializeField] private SpriteRenderer flameRight;
 
     public void SetHeightHigh()
     {
@@ -15,6 +18,9 @@ public class SpeederHeightChanger : MonoBehaviour
         lowCollider.SetActive(false);
 
         renderer.sortingOrder = 20;
+        flameMain.sortingOrder = 19;
+        flameLeft.sortingOrder = 19;
+        flameRight.sortingOrder = 19;
     }
 
     public void SetHeightLow()
@@ -23,5 +29,8 @@ public class SpeederHeightChanger : MonoBehaviour
         highCollider.SetActive(false);
 
         renderer.sortingOrder = 10;
+        flameMain.sortingOrder = 9;
+        flameLeft.sortingOrder = 9;
+        flameRight.sortingOrder = 9;
     }
 }

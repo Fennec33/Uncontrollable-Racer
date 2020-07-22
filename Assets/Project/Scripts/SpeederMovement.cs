@@ -8,6 +8,8 @@ public class SpeederMovement : MonoBehaviour
     [SerializeField] private float breakForce =2f;
     [SerializeField] private float turnSpeed = 150f;
 
+    [SerializeField] private SpeederVFX speederVFX;
+
     private Rigidbody2D _rigidbody;
 
     private float _normalDrag;
@@ -28,21 +30,41 @@ public class SpeederMovement : MonoBehaviour
         {
             Accelerate();
         }
+        else
+        {
+            NoAccelerate();
+        }
 
         if (IsTurning)
         {
             Turn();
+        }
+        else
+        {
+            NoTurn();
         }
     }
 
     private void Accelerate()
     {
         _rigidbody.AddForce(forwardSpeed * transform.up);
+        speederVFX.TurnFlamesOn();
+    }
+
+    private void NoAccelerate()
+    {
+        speederVFX.TurnFlamesOff();
     }
 
     private void Turn()
     {
         transform.Rotate(Time.deltaTime * turnSpeed * TurnDirection * Vector3.back);
+        speederVFX.TurnSpeeder(TurnDirection);
+    }
+
+    public void NoTurn()
+    {
+        speederVFX.TurnReset();
     }
 
     public void StartBreaking()

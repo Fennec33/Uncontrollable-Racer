@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1187864570418684923}
   - component: {fileID: 1086555402}
   - component: {fileID: 1187864570418684922}
+  - component: {fileID: 183598528}
   m_Layer: 0
   m_Name: Speeder
   m_TagString: Speeder
@@ -50,7 +51,7 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 10
   m_LinearDrag: 0.5
-  m_AngularDrag: 1
+  m_AngularDrag: 2
   m_GravityScale: 0
   m_Material: {fileID: 6200000, guid: 2cbf097f3494e3044948367e6b23935f, type: 2}
   m_Interpolate: 0
@@ -77,15 +78,28 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1187864570418684804}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 16165e181b61b1444876529a76397fae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forwardSpeed: 50
-  breakForce: 2
+  forwardSpeed: 60
+  breakForce: 3
   turnSpeed: 150
   speederVFX: {fileID: 33413094}
+--- !u!114 &183598528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1187864570418684804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee0ff1dbe8024cb428e0ca08addb0ce2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingWaypoint: {fileID: 0}
 --- !u!1 &1187864570888271426
 GameObject:
   m_ObjectHideFlags: 0
@@ -313,7 +327,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00416a449fc587b49925deddd36a94d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxTurnAngle: 30
+  maxTurnAngle: 20
   turnSpeed: 150
   flames: {fileID: 7534699742791943129}
 --- !u!1 &7534699742791943129
@@ -331,7 +345,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2346487679941570537
 Transform:
   m_ObjectHideFlags: 0

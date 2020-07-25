@@ -4,34 +4,46 @@ using UnityEngine;
 
 public class SpeederAI : MonoBehaviour
 {
-    [SerializeField] SpeederMovement speeder;
-    [SerializeField] Transform startingWaypoint;
-    [SerializeField] float turningSpeed = 150f;
+    [SerializeField] private SpeederMovement speeder;
+    [SerializeField] private Transform startingWaypoint;
+    [SerializeField] private float stopAcceleratingAngle = 40;
     
     private Vector3 _currentWaypoint;
     private Vector3 _vectorToTarget;
+    private float _turnSpeed;
 
     private void Start()
     {
         _currentWaypoint = startingWaypoint.position;
+        _turnSpeed = speeder.GetTurnSpeed();
     }
 
     private void Update()
     {
         TurnTowardsCurrentWaypoint();
-        Accelerate();
+        AccelerationControl();
     }
 
     private void TurnTowardsCurrentWaypoint()
     {
         _vectorToTarget = _currentWaypoint - transform.position;
         Quaternion targetRotation = Quaternion.LookRotation(forward: Vector3.forward, upwards: _vectorToTarget);
-        transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, turningSpeed * Time.deltaTime);
+
+        transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, _turnSpeed * Time.deltaTime);
     }
 
-    private void Accelerate()
+    private void AccelerationControl()
     {
-        speeder.IsAccelerating = true;
+        _vectorToTarget = _currentWaypoint - transform.position;
+
+        if (Vector3.Angle(_vectorToTarget, transform.up) < stopAcceleratingAngle)
+        {
+            speeder.IsAccelerating = true;
+        }
+        else
+        {
+            speeder.IsAccelerating = false;
+        }
     }
 
     public void SetNewWaypoint(Transform newPoint)

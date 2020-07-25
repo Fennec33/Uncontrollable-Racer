@@ -17,6 +17,7 @@ public class SpeederMovement : MonoBehaviour
     public bool IsAccelerating { private get; set; }
     public bool IsTurning { private get; set; }
     public float TurnDirection { private get; set; }
+    public float GetTurnSpeed() { return turnSpeed; }
 
     private void Awake()
     {

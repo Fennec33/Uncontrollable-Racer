@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class SpeederMovement : MonoBehaviour
 {
-    [SerializeField] private float forwardSpeed = 50f;
-    [SerializeField] private float breakForce =2f;
+    [SerializeField] private float forwardSpeed = 80f;
+    [SerializeField] private float breakForce =3f;
     [SerializeField] private float turnSpeed = 150f;
 
     [SerializeField] private SpeederVFX speederVFX;

@@ -17,10 +17,10 @@ public class SpeederHeightChanger : MonoBehaviour
         highCollider.SetActive(true);
         lowCollider.SetActive(false);
 
-        renderer.sortingOrder = 20;
-        flameMain.sortingOrder = 19;
-        flameLeft.sortingOrder = 19;
-        flameRight.sortingOrder = 19;
+        renderer.sortingOrder = 110;
+        flameMain.sortingOrder = 109;
+        flameLeft.sortingOrder = 109;
+        flameRight.sortingOrder = 109;
     }
 
     public void SetHeightLow()
@@ -28,9 +28,9 @@ public class SpeederHeightChanger : MonoBehaviour
         lowCollider.SetActive(true);
         highCollider.SetActive(false);
 
-        renderer.sortingOrder = 10;
-        flameMain.sortingOrder = 9;
-        flameLeft.sortingOrder = 9;
-        flameRight.sortingOrder = 9;
+        renderer.sortingOrder = 90;
+        flameMain.sortingOrder = 89;
+        flameLeft.sortingOrder = 89;
+        flameRight.sortingOrder = 89;
     }
 }

@@ -309,7 +309,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9715490}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 16.97, y: -20.89, z: 0}
+  m_LocalPosition: {x: 15.79, y: -20.89, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 617101037}
@@ -331,8 +331,8 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: 1.8238621, y: -2.4116535}
-  - {x: -2.936719, y: -0.18601036}
+  - {x: 3.0792055, y: -2.1453686}
+  - {x: -1.7574558, y: -0.2620926}
 --- !u!114 &9715493
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -799,8 +799,8 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: 4.276639, y: -1.3563154}
-  - {x: 2.9658241, y: 3.9807167}
+  - {x: 4.847534, y: -1.9075258}
+  - {x: 2.4933584, y: 3.7641692}
 --- !u!114 &32340926
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3817,7 +3817,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 244059783}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -14.38, y: 3.45, z: 0}
+  m_LocalPosition: {x: -15.45, y: 3.45, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 617101037}
@@ -3839,8 +3839,8 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: -2.724616, y: 1.3219268}
-  - {x: 2.6417933, y: 2.8482988}
+  - {x: -1.5934572, y: 1.1079237}
+  - {x: 3.772954, y: 2.5425808}
 --- !u!114 &244059786
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6095,7 +6095,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 407009275}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.85, y: -24.65, z: 0}
+  m_LocalPosition: {x: 7.05, y: -24.42, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 617101037}
@@ -6117,8 +6117,8 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: -4.344325, y: -1.691185}
-  - {x: 0.19721127, y: 1.244503}
+  - {x: -3.5776196, y: -2.7579079}
+  - {x: -0.10280514, y: 1.2778378}
 --- !u!114 &407009278
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6180,9 +6180,9 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: -0.4391184, y: -0.7924311}
-  - {x: 4.634098, y: -1.1183553}
-  - {x: 4.8121376, y: -1.5618145}
+  - {x: -0.60228634, y: -0.22876388}
+  - {x: 4.604431, y: -0.80685496}
+  - {x: 4.767639, y: -0.89431393}
 --- !u!114 &416486951
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6870,7 +6870,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 458522881}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -19.57, y: -3.13, z: 0}
+  m_LocalPosition: {x: -20.52, y: -3.13, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 617101037}
@@ -6892,8 +6892,8 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: -0.7456398, y: 3.590012}
-  - {x: 2.3294506, y: -1.2794328}
+  - {x: -0.41240883, y: 2.8776863}
+  - {x: 4.72705, y: 0.8781779}
 --- !u!114 &458522884
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9686,8 +9686,8 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: -0.28662777, y: -0.46413624}
-  - {x: 4.6058702, y: 1.3500915}
+  - {x: -0.37562752, y: -0.40480268}
+  - {x: 4.2943697, y: 1.6764252}
 --- !u!114 &653532647
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9911,8 +9911,8 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: 0.5026903, y: -1.8410015}
-  - {x: 2.515788, y: 3.8597784}
+  - {x: 0.17402649, y: -0.925437}
+  - {x: 2.9148798, y: 3.6015415}
 --- !u!114 &672137915
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12380,8 +12380,8 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: -4.2410107, y: 1.2015953}
-  - {x: 0.7482195, y: 2.5875816}
+  - {x: -4.607697, y: 3.7017212}
+  - {x: 0.7482195, y: 2.4542408}
 --- !u!114 &799303588
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12605,8 +12605,8 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: 0.6777077, y: -0.8821745}
-  - {x: 5.1916084, y: 2.2197785}
+  - {x: -0.049126625, y: -0.49650764}
+  - {x: 4.761442, y: 2.4867783}
 --- !u!114 &832295638
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16153,7 +16153,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1061014057}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.95, y: 9.63, z: 0}
+  m_LocalPosition: {x: -5.58, y: 9.63, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 617101037}
@@ -16175,8 +16175,8 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: -2.7939005, y: -4.3842344}
-  - {x: 1.4110103, y: -0.67588043}
+  - {x: -3.5419722, y: -3.7345939}
+  - {x: 0.9385438, y: -0.59713554}
 --- !u!114 &1061014060
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17274,7 +17274,7 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: -2.4660778, y: -4.1409016}
+  - {x: -3.390068, y: -3.817505}
   - {x: -0.2523346, y: 0.65996933}
 --- !u!114 &1130750892
 MonoBehaviour:
@@ -19805,8 +19805,8 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: -4.125622, y: -0.98275566}
-  - {x: 1.0334635, y: 1.0521908}
+  - {x: -4.4952154, y: 1.2348232}
+  - {x: 0.98726654, y: 0.9597912}
 --- !u!114 &1255519637
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20111,7 +20111,7 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: 2.3385658, y: -3.791029}
+  - {x: 3.0777607, y: -3.1442337}
   - {x: -1.2148247, y: 0.08763313}
 --- !u!114 &1287322728
 MonoBehaviour:
@@ -21649,7 +21649,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1361099029}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -17.56, y: -10.87, z: 0}
+  m_LocalPosition: {x: -16.44, y: -10.87, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 617101037}
@@ -21671,8 +21671,8 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: -2.708599, y: -0.33391762}
-  - {x: 1.6040497, y: 2.9796638}
+  - {x: -3.6448631, y: -0.5211706}
+  - {x: 0.7426872, y: 2.605157}
 --- !u!114 &1361099032
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24777,7 +24777,7 @@ EdgeCollider2D:
   m_EdgeRadius: 0
   m_Points:
   - {x: 1.333334, y: -3.4998026}
-  - {x: 3.0377579, y: 1.6894093}
+  - {x: 2.9203777, y: 1.7363615}
 --- !u!114 &1553691851
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27517,7 +27517,7 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: -1.8149176, y: -4.2264175}
+  - {x: -1.9527197, y: -3.2814856}
   - {x: 3.3466163, y: -2.6842728}
 --- !u!114 &1714091457
 MonoBehaviour:
@@ -27742,8 +27742,8 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: 1.6188083, y: -4.511816}
-  - {x: 1.0119495, y: 0.5331688}
+  - {x: -0.5466609, y: -4.3936996}
+  - {x: 0.7757168, y: 0.78908825}
 --- !u!114 &1753135071
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34436,8 +34436,8 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: 1.3683491, y: -0.9644506}
-  - {x: 5.503719, y: 4.0872087}
+  - {x: 0.4824767, y: -0.76759005}
+  - {x: 4.263497, y: 4.205325}
 --- !u!114 &2094194613
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35191,6 +35191,11 @@ PrefabInstance:
         type: 3}
       propertyPath: forwardSpeed
       value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 1187864570418684922, guid: 160522abf47fded47a1d82181adae67c,
+        type: 3}
+      propertyPath: turnSpeed
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 1187864570418684923, guid: 160522abf47fded47a1d82181adae67c,
         type: 3}

@@ -10,7 +10,7 @@ public class Waypoint : MonoBehaviour
     {
         if (collision.tag == "Speeder")
         {
-            SpeederAI _ai = collision.transform.parent.GetComponent<SpeederAI>();
+            SpeederAI _ai = collision.GetComponent<SpeederAI>();
 
             if (_ai != null)
             {

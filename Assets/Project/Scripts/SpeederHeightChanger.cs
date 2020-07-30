@@ -4,33 +4,33 @@ using UnityEngine;
 
 public class SpeederHeightChanger : MonoBehaviour
 {
-    [SerializeField] private GameObject lowCollider;
-    [SerializeField] private GameObject highCollider;
-
-    [SerializeField] private SpriteRenderer renderer;
+    [SerializeField] private SpriteRenderer mainRenderer;
     [SerializeField] private SpriteRenderer flameMain;
     [SerializeField] private SpriteRenderer flameLeft;
     [SerializeField] private SpriteRenderer flameRight;
 
+    private int _layerTrackColliderLow = 9;
+    private int _layerTrackColliderHigh = 10;
+
     public void SetHeightHigh()
     {
-        highCollider.SetActive(true);
-        lowCollider.SetActive(false);
+        gameObject.layer = _layerTrackColliderHigh;
 
-        renderer.sortingOrder = 110;
-        flameMain.sortingOrder = 109;
-        flameLeft.sortingOrder = 109;
-        flameRight.sortingOrder = 109;
+        SetSortingLayerOfSpeeder(110);
     }
 
     public void SetHeightLow()
     {
-        lowCollider.SetActive(true);
-        highCollider.SetActive(false);
+        gameObject.layer = _layerTrackColliderLow;
 
-        renderer.sortingOrder = 90;
-        flameMain.sortingOrder = 89;
-        flameLeft.sortingOrder = 89;
-        flameRight.sortingOrder = 89;
+        SetSortingLayerOfSpeeder(90);
+    }
+
+    private void SetSortingLayerOfSpeeder(int layer)
+    {
+        mainRenderer.sortingOrder = layer;
+        flameMain.sortingOrder = layer - 1;
+        flameLeft.sortingOrder = layer - 1;
+        flameRight.sortingOrder = layer - 1;
     }
 }

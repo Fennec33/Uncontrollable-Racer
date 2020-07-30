@@ -9,6 +9,7 @@ public class SpeederMovement : MonoBehaviour
     [SerializeField] private float turnSpeed = 150f;
 
     [SerializeField] private SpeederVFX speederVFX;
+    [SerializeField] private SpeederAudio audio;
 
     private Rigidbody2D _rigidbody;
 
@@ -30,10 +31,12 @@ public class SpeederMovement : MonoBehaviour
         if (IsAccelerating)
         {
             Accelerate();
+            audio.EngineSound(true);
         }
         else
         {
             NoAccelerate();
+            audio.EngineSound(false);
         }
 
         if (IsTurning)

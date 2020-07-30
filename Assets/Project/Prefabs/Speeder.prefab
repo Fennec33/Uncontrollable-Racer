@@ -1,5 +1,147 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &886698443
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 886698446}
+  - component: {fileID: 886698444}
+  - component: {fileID: 886698445}
+  m_Layer: 0
+  m_Name: SpeederAudio
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &886698446
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 886698443}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1187864570418684805}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &886698444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 886698443}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b6bc906543ffb64d8fe7a2e9323f641, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  source: {fileID: 886698445}
+--- !u!82 &886698445
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 886698443}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 96ff770fd578f1049a0c97285eb13cdf,
+    type: 2}
+  m_audioClip: {fileID: 8300000, guid: ced431ec6e072164386ec247f5559ddf, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 10
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1187864570418684804
 GameObject:
   m_ObjectHideFlags: 0
@@ -10,10 +152,14 @@ GameObject:
   m_Component:
   - component: {fileID: 1187864570418684805}
   - component: {fileID: 1187864570418684923}
-  - component: {fileID: 1086555402}
+  - component: {fileID: 1274436470}
   - component: {fileID: 1187864570418684922}
+  - component: {fileID: 1086555402}
   - component: {fileID: 183598528}
-  m_Layer: 0
+  - component: {fileID: 1274436468}
+  - component: {fileID: 1274436469}
+  - component: {fileID: 589900588826391450}
+  m_Layer: 10
   m_Name: Speeder
   m_TagString: Speeder
   m_Icon: {fileID: 0}
@@ -32,8 +178,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1187864570932032363}
-  - {fileID: 1187864570908253377}
-  - {fileID: 1187864570888271427}
+  - {fileID: 886698446}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -50,14 +195,47 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 10
-  m_LinearDrag: 0.5
-  m_AngularDrag: 2
+  m_LinearDrag: 0.8
+  m_AngularDrag: 3
   m_GravityScale: 0
   m_Material: {fileID: 6200000, guid: 2cbf097f3494e3044948367e6b23935f, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!70 &1274436470
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1187864570418684804}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: 2cbf097f3494e3044948367e6b23935f, type: 2}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.15}
+  m_Size: {x: 0.25, y: 0.7}
+  m_Direction: 0
+--- !u!114 &1187864570418684922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1187864570418684804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16165e181b61b1444876529a76397fae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  forwardSpeed: 80
+  breakForce: 3
+  turnSpeed: 150
+  speederVFX: {fileID: 33413094}
+  audio: {fileID: 886698444}
 --- !u!114 &1086555402
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -71,7 +249,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speeder: {fileID: 1187864570418684922}
---- !u!114 &1187864570418684922
+--- !u!114 &183598528
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -80,14 +258,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1187864570418684804}
   m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16165e181b61b1444876529a76397fae, type: 3}
+  m_Script: {fileID: 11500000, guid: ee0ff1dbe8024cb428e0ca08addb0ce2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forwardSpeed: 60
-  breakForce: 3
-  turnSpeed: 150
-  speederVFX: {fileID: 33413094}
---- !u!114 &183598528
+  speeder: {fileID: 1187864570418684922}
+  startingWaypoint: {fileID: 0}
+  stopAcceleratingAngle: 40
+--- !u!114 &1274436468
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -96,142 +273,35 @@ MonoBehaviour:
   m_GameObject: {fileID: 1187864570418684804}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee0ff1dbe8024cb428e0ca08addb0ce2, type: 3}
+  m_Script: {fileID: 11500000, guid: b021fc0e34f9b204d882f2ed0015e33a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingWaypoint: {fileID: 0}
---- !u!1 &1187864570888271426
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1187864570888271427}
-  - component: {fileID: 1187864570888271424}
-  - component: {fileID: 7997524728887703463}
-  m_Layer: 10
-  m_Name: HighCollider
-  m_TagString: Speeder
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1187864570888271427
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1187864570888271426}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1187864570418684805}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!70 &1187864570888271424
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1187864570888271426}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 6200000, guid: 2cbf097f3494e3044948367e6b23935f, type: 2}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.15}
-  m_Size: {x: 0.25, y: 0.7}
-  m_Direction: 0
---- !u!114 &7997524728887703463
+  pathCreator: {fileID: 0}
+  raceManager: {fileID: 0}
+--- !u!114 &1274436469
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1187864570888271426}
+  m_GameObject: {fileID: 1187864570418684804}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2f92cb71d92fc5a40b81fd2642b94575, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lowCollider: {fileID: 1187864570908253376}
-  highCollider: {fileID: 1187864570888271426}
-  renderer: {fileID: 1187864570932032360}
+  mainRenderer: {fileID: 1187864570932032360}
   flameMain: {fileID: 1337453315474295330}
   flameLeft: {fileID: 6925121374564605950}
   flameRight: {fileID: 3654470961338379612}
---- !u!1 &1187864570908253376
-GameObject:
+--- !u!81 &589900588826391450
+AudioListener:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1187864570908253377}
-  - component: {fileID: 1187864570908253382}
-  - component: {fileID: 7532329137508490437}
-  m_Layer: 9
-  m_Name: LowCollider
-  m_TagString: Speeder
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &1187864570908253377
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1187864570908253376}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1187864570418684805}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!70 &1187864570908253382
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1187864570908253376}
+  m_GameObject: {fileID: 1187864570418684804}
   m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 6200000, guid: 2cbf097f3494e3044948367e6b23935f, type: 2}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.15}
-  m_Size: {x: 0.25, y: 0.7}
-  m_Direction: 0
---- !u!114 &7532329137508490437
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1187864570908253376}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f92cb71d92fc5a40b81fd2642b94575, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lowCollider: {fileID: 1187864570908253376}
-  highCollider: {fileID: 1187864570888271426}
-  renderer: {fileID: 1187864570932032360}
-  flameMain: {fileID: 1337453315474295330}
-  flameLeft: {fileID: 6925121374564605950}
-  flameRight: {fileID: 3654470961338379612}
 --- !u!1 &1187864570932032362
 GameObject:
   m_ObjectHideFlags: 0
@@ -303,9 +373,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 10
+  m_SortingOrder: 90
   m_Sprite: {fileID: 21300000, guid: 62b9abf0eaab8a24b89ad72bce246c1b, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.7607844, g: 0.7607844, b: 0.7607844, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

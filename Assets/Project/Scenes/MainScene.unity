@@ -15237,7 +15237,7 @@ PrefabInstance:
       value: 0.37415743
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 589900588826391450, guid: 160522abf47fded47a1d82181adae67c, type: 3}
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 160522abf47fded47a1d82181adae67c, type: 3}
 --- !u!114 &982517278 stripped
 MonoBehaviour:
@@ -17082,7 +17082,7 @@ PrefabInstance:
       value: 0.37415743
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 589900588826391450, guid: 160522abf47fded47a1d82181adae67c, type: 3}
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 160522abf47fded47a1d82181adae67c, type: 3}
 --- !u!114 &1104716166 stripped
 MonoBehaviour:
@@ -20052,6 +20052,14 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1187864572129073210}
   m_PrefabAsset: {fileID: 0}
+--- !u!81 &1274436468
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1274436467}
+  m_Enabled: 1
 --- !u!1 &1276012186
 GameObject:
   m_ObjectHideFlags: 0
@@ -33561,7 +33569,7 @@ PrefabInstance:
       value: 0.37415743
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 589900588826391450, guid: 160522abf47fded47a1d82181adae67c, type: 3}
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 160522abf47fded47a1d82181adae67c, type: 3}
 --- !u!114 &2037010717 stripped
 MonoBehaviour:
@@ -34038,8 +34046,7 @@ PrefabInstance:
       propertyPath: m_Color.b
       value: 0.37415743
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 589900588826391450, guid: 160522abf47fded47a1d82181adae67c, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 160522abf47fded47a1d82181adae67c, type: 3}
 --- !u!114 &2055183742 stripped
 MonoBehaviour:
@@ -34724,7 +34731,7 @@ PrefabInstance:
       value: 0.37415743
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 589900588826391450, guid: 160522abf47fded47a1d82181adae67c, type: 3}
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 160522abf47fded47a1d82181adae67c, type: 3}
 --- !u!114 &2092713966 stripped
 MonoBehaviour:

@@ -102,7 +102,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -158,7 +158,6 @@ GameObject:
   - component: {fileID: 183598528}
   - component: {fileID: 1274436468}
   - component: {fileID: 1274436469}
-  - component: {fileID: 589900588826391450}
   m_Layer: 10
   m_Name: Speeder
   m_TagString: Speeder
@@ -294,14 +293,6 @@ MonoBehaviour:
   flameMain: {fileID: 1337453315474295330}
   flameLeft: {fileID: 6925121374564605950}
   flameRight: {fileID: 3654470961338379612}
---- !u!81 &589900588826391450
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1187864570418684804}
-  m_Enabled: 1
 --- !u!1 &1187864570932032362
 GameObject:
   m_ObjectHideFlags: 0

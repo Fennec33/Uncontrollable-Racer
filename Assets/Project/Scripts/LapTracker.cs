@@ -13,6 +13,7 @@ public class LapTracker : MonoBehaviour
 
     private int _id;
     private float _positionOnPath;
+    private bool _pausePositionUpdate = false;
 
     void Start()
     {
@@ -21,9 +22,12 @@ public class LapTracker : MonoBehaviour
 
     void Update()
     {
-        _positionOnPath = pathCreator.path.GetClosestDistanceAlongPath(transform.position);
-        raceManager.UpdateCurrentPosition(_id, _positionOnPath);
-        checkLap();
+        if (!_pausePositionUpdate)
+        {
+            _positionOnPath = pathCreator.path.GetClosestDistanceAlongPath(transform.position);
+            raceManager.UpdateCurrentPosition(_id, _positionOnPath);
+            checkLap();
+        }
     }
 
     private void checkLap()
@@ -50,5 +54,15 @@ public class LapTracker : MonoBehaviour
         {
             _finishingLap = true;
         }
+    }
+
+    public void PausePositionUpdate()
+    {
+        _pausePositionUpdate = true;
+    }
+
+    public void UnpausePositionUpdate()
+    {
+        _pausePositionUpdate = false;
     }
 }

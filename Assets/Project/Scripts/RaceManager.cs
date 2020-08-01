@@ -5,6 +5,7 @@ using UnityEngine;
 public class RaceManager : MonoBehaviour
 {
     [SerializeField] private int numberOfLaps = 3;
+    [SerializeField] private RaceUI raceUI;
     
     public GameObject player;
     public int numberOfSpeeders = 6;
@@ -13,6 +14,7 @@ public class RaceManager : MonoBehaviour
     private int _nextID = 0;
     private int _playerID;
     private bool _raceOver = false;
+    private int _playerRanking = 0;
 
     private void Awake()
     {
@@ -21,9 +23,8 @@ public class RaceManager : MonoBehaviour
 
     private void Update()
     {
-        GetPlayerRanking();
-
-        //TODO have it update ui every update
+        _playerRanking = GetPlayerRanking();
+        raceUI.DisplayCurrentRanking(_playerRanking);
     }
 
     public int RequestNewID(GameObject speeder)
@@ -63,12 +64,15 @@ public class RaceManager : MonoBehaviour
 
         for (int i = 0; i < _speeders.Length; i++)
         {
-            if (i == _playerID) break;
+            if (i == _playerID) continue;
 
             position = _speeders[i].GetPosition();
             lap = _speeders[i].GetLap();
 
-            if (position > playerPosition && lap == playerLap || lap > playerLap) ranking++;
+            if (position > playerPosition && lap == playerLap || lap > playerLap)
+            {
+                ranking++;
+            }
         }
         
         return ranking;

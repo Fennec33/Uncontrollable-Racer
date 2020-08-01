@@ -8,8 +8,17 @@ public class SpeederVFX : MonoBehaviour
     [SerializeField] private float turnSpeed = 150f;
 
     [SerializeField] private GameObject flames;
+    [SerializeField] private GameObject collisionSpark;
+    
+    [SerializeField] private float crashSparkDelayTime = 1;
 
-    private float _currentTurnAngle = 0;
+    private float _currentTurnAngle = 0f;
+    private float _timeSinceLastCrash = 0f;
+
+    private void Update()
+    {
+        _timeSinceLastCrash += Time.deltaTime;
+    }
 
     public void TurnSpeeder(float direction)
     {
@@ -44,5 +53,14 @@ public class SpeederVFX : MonoBehaviour
     public void TurnFlamesOff()
     {
         flames.SetActive(false);
+    }
+
+    public void CollisionSparkEffect(ContactPoint2D contact)
+    {
+        if (_timeSinceLastCrash >= crashSparkDelayTime)
+        {
+            Instantiate(collisionSpark, contact.point, Quaternion.identity);
+            _timeSinceLastCrash = 0f;
+        }
     }
 }

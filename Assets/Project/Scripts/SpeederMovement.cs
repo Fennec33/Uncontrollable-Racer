@@ -80,4 +80,12 @@ public class SpeederMovement : MonoBehaviour
     {
         _rigidbody.drag = _normalDrag;
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        audio.playCrashSound();
+
+        ContactPoint2D contact = collision.GetContact(0);
+        speederVFX.CollisionSparkEffect(contact);
+    }
 }

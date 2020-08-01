@@ -52,6 +52,8 @@ public class RaceManager : MonoBehaviour
         _speeders[id].IncreaseLap();
 
         if (_speeders[_playerID].GetLap() > numberOfLaps && !_raceOver) EndRace();
+
+        raceUI.DisplayCurrentLap(_speeders[_playerID].GetLap(), numberOfLaps);
     }
 
     private int GetPlayerRanking()

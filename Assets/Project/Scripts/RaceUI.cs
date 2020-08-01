@@ -7,6 +7,7 @@ public class RaceUI : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI rankingNumber;
     [SerializeField] private TextMeshProUGUI rankingSuffix;
+    [SerializeField] private TextMeshProUGUI lapCounter;
 
     private int _playerRanking = 0;
     private string _playerRankingSuffix = "";
@@ -46,5 +47,10 @@ public class RaceUI : MonoBehaviour
         }
 
         return suffix;
+    }
+
+    public void DisplayCurrentLap(int currentlap, int totalLaps)
+    {
+        lapCounter.text = "Lap " + currentlap + "/" + totalLaps;
     }
 }

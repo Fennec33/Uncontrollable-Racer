@@ -9,9 +9,9 @@ public class PlayerController : MonoBehaviour
 
     private InputMaster _controlls;
 
-    private bool _accelerating;
-    private bool _breaking;
-    private bool _turning;
+    private bool _accelerating = false;
+    private bool _breaking = false;
+    private bool _turning = false;
 
     private void Awake()
     {

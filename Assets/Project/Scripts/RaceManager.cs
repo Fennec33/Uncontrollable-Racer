@@ -1,12 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class RaceManager : MonoBehaviour
 {
     [SerializeField] private int numberOfLaps = 3;
     [SerializeField] private RaceUI raceUI;
-    
+    [SerializeField] private TextMeshProUGUI rankingtext;
+
+    [SerializeField] private GameObject gameUI;
+    [SerializeField] private GameObject raceOverScreen;
+
     public GameObject player;
     public int numberOfSpeeders = 6;
 
@@ -83,6 +88,11 @@ public class RaceManager : MonoBehaviour
     private void EndRace()
     {
         _raceOver = true;
-        Debug.Log("Race Over, you placed " + GetPlayerRanking());
+        gameUI.SetActive(false);
+        raceOverScreen.SetActive(true);
+
+        int rank = GetPlayerRanking();
+
+        rankingtext.text = "You Got " + rank + raceUI.GetSuffixForNumber(rank) + " Place";
     }
 }

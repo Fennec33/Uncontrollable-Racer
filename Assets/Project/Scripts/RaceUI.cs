@@ -24,7 +24,7 @@ public class RaceUI : MonoBehaviour
         rankingSuffix.text = _playerRankingSuffix;
     }
 
-    private string GetSuffixForNumber(int number)
+    public string GetSuffixForNumber(int number)
     {
         string suffix = "";
         int num = number % 10;

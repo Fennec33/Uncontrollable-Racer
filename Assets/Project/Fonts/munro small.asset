@@ -152,7 +152,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 71c1514a6bd24e1e882cebbe1904ce04, type: 3}
-  m_Name: munro2
+  m_Name: munro small
   m_EditorClassIdentifier: 
   hashCode: 94109081
   material: {fileID: -3767891091682656689}

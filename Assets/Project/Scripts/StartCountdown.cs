@@ -7,6 +7,14 @@ public class StartCountdown : MonoBehaviour
     [SerializeField] private SpeederMovement playerMovement;
     [SerializeField] private SpeederAI[] speederAIs;
 
+    [SerializeField] private float waitTime = 1f;
+
+    [SerializeField] private GameObject num1;
+    [SerializeField] private GameObject num2;
+    [SerializeField] private GameObject num3;
+
+    private bool _raceStarted = false;
+
     private void Start()
     {
         playerMovement.enabled = false;
@@ -18,6 +26,35 @@ public class StartCountdown : MonoBehaviour
     }
 
     public void StartRace()
+    {
+        if (_raceStarted) return;
+
+        StartCoroutine(Countdown());
+    }
+
+    IEnumerator Countdown()
+    {
+        yield return new WaitForSeconds(waitTime);
+
+        num1.SetActive(true);
+
+        yield return new WaitForSeconds(waitTime);
+
+        num1.SetActive(false);
+        num2.SetActive(true);
+
+        yield return new WaitForSeconds(waitTime);
+
+        num2.SetActive(false);
+        num3.SetActive(true);
+
+        yield return new WaitForSeconds(waitTime);
+
+        num3.SetActive(false);
+        CountdownOver();
+    }
+    
+    private void CountdownOver()
     {
         TurnSpeederControllersOn();
     }

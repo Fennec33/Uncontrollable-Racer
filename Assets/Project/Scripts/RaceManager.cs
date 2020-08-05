@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class RaceManager : MonoBehaviour
@@ -21,9 +22,12 @@ public class RaceManager : MonoBehaviour
     private bool _raceOver = false;
     private int _playerRanking = 0;
 
+    private static bool _hasBeenRestarted = false;
+
     private void Awake()
     {
         _speeders = new SpeederPlacementData[6];
+        Debug.Log(_hasBeenRestarted);
     }
 
     private void Update()
@@ -94,5 +98,11 @@ public class RaceManager : MonoBehaviour
         int rank = GetPlayerRanking();
 
         rankingtext.text = "You Got " + rank + raceUI.GetSuffixForNumber(rank) + " Place";
+    }
+
+    public void RestartScene()
+    {
+        _hasBeenRestarted = true;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

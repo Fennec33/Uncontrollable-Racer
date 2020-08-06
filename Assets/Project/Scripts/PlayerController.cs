@@ -1,21 +1,15 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] private SpeederMovement speeder;
-
+    private SpeederMovement _speederMovement;
     private InputMaster _controlls;
-
-    private bool _accelerating = false;
-    private bool _breaking = false;
-    private bool _turning = false;
 
     private void Awake()
     {
         _controlls = new InputMaster();
+        _speederMovement = GetComponent<SpeederMovement>();
     }
 
     private void OnEnable()
@@ -50,32 +44,32 @@ public class PlayerController : MonoBehaviour
 
     private void AccelerateOn(InputAction.CallbackContext context)
     {
-        speeder.IsAccelerating = true;
+        _speederMovement.IsAccelerating = true;
     }
 
     private void AccelerateOff(InputAction.CallbackContext context)
     {
-        speeder.IsAccelerating = false;
+        _speederMovement.IsAccelerating = false;
     }
 
     private void TurnOn(InputAction.CallbackContext context)
     {
-        speeder.TurnDirection = context.ReadValue<float>();
-        speeder.IsTurning = true;
+        _speederMovement.TurnDirection = context.ReadValue<float>();
+        _speederMovement.IsTurning = true;
     }
 
     private void TurnOff(InputAction.CallbackContext context)
     {
-        speeder.IsTurning = false;
+        _speederMovement.IsTurning = false;
     }
 
     private void BreakOn(InputAction.CallbackContext context)
     {
-        speeder.StartBreaking();
+        _speederMovement.StartBreaking();
     }
 
     private void BreakOff(InputAction.CallbackContext context)
     {
-        speeder.StopBreaking();
+        _speederMovement.StopBreaking();
     }
 }

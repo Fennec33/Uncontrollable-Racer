@@ -1,11 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
 
 public class RaceManager : MonoBehaviour
 {
+    public static RaceManager Instance { get; private set; }
+
     [SerializeField] private int numberOfLaps = 3;
     [SerializeField] private RaceUI raceUI;
     [SerializeField] private TextMeshProUGUI rankingtext;
@@ -27,8 +27,10 @@ public class RaceManager : MonoBehaviour
 
     private void Awake()
     {
+        if (Instance == null) Instance = this;
+        else Destroy(gameObject);
+
         _speeders = new SpeederPlacementData[6];
-        Debug.Log(_hasBeenRestarted);
     }
 
     private void Start()

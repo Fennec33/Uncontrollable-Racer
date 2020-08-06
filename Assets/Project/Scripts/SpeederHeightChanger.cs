@@ -1,36 +1,44 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class SpeederHeightChanger : MonoBehaviour
 {
-    [SerializeField] private SpriteRenderer mainRenderer;
-    [SerializeField] private SpriteRenderer flameMain;
-    [SerializeField] private SpriteRenderer flameLeft;
-    [SerializeField] private SpriteRenderer flameRight;
+    [SerializeField] private GameObject speederArt;
 
+    private SpriteRenderer _mainRenderer;
+    private SpriteRenderer[] _effectRenderers;
+
+    private int _highSortingLayer = 110;
+    private int _lowSortingLayer = 90;
     private int _layerTrackColliderLow = 9;
     private int _layerTrackColliderHigh = 10;
+
+    private void Awake()
+    {
+        _mainRenderer = speederArt.GetComponent<SpriteRenderer>();
+        _effectRenderers = speederArt.transform.Find("Flames").gameObject.GetComponentsInChildren<SpriteRenderer>();
+    }
 
     public void SetHeightHigh()
     {
         gameObject.layer = _layerTrackColliderHigh;
 
-        SetSortingLayerOfSpeeder(110);
+        SetSortingLayerOfSpeeder(_highSortingLayer);
     }
 
     public void SetHeightLow()
     {
         gameObject.layer = _layerTrackColliderLow;
 
-        SetSortingLayerOfSpeeder(90);
+        SetSortingLayerOfSpeeder(_lowSortingLayer);
     }
 
     private void SetSortingLayerOfSpeeder(int layer)
     {
-        mainRenderer.sortingOrder = layer;
-        flameMain.sortingOrder = layer - 1;
-        flameLeft.sortingOrder = layer - 1;
-        flameRight.sortingOrder = layer - 1;
+        _mainRenderer.sortingOrder = layer;
+
+        foreach(SpriteRenderer renderer in _effectRenderers)
+        {
+            renderer.sortingOrder = layer - 1;
+        }
     }
 }

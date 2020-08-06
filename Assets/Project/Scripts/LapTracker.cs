@@ -1,40 +1,35 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using PathCreation;
 
 public class LapTracker : MonoBehaviour
 {
-    public PathCreator pathCreator;
-    public RaceManager raceManager;
-
-    private bool _startedLap = true;
-    private bool _finishingLap = false;
-
+    private PathCreator _trackPath;
     private int _id;
     private float _positionOnPath;
+    private bool _startedLap = true;
+    private bool _finishingLap = false;
     private bool _pausePositionUpdate = false;
 
     void Start()
     {
-        _id = raceManager.RequestNewID(this.gameObject);
+        _id = RaceManager.Instance.RequestNewID(this.gameObject);
+        _trackPath = FindObjectOfType<PathCreator>();
     }
 
     void Update()
     {
-        if (!_pausePositionUpdate)
-        {
-            _positionOnPath = pathCreator.path.GetClosestDistanceAlongPath(transform.position);
-            raceManager.UpdateCurrentPosition(_id, _positionOnPath);
-            checkLap();
-        }
+        if (_pausePositionUpdate) return;
+
+        _positionOnPath = _trackPath.path.GetClosestDistanceAlongPath(transform.position);
+        RaceManager.Instance.UpdateCurrentPosition(_id, _positionOnPath);
+        checkLap();
     }
 
     private void checkLap()
     {
         if (_positionOnPath < 5f && _startedLap && _finishingLap)
         {
-            raceManager.FinishedLap(_id);
+            RaceManager.Instance.FinishedLap(_id);
             _startedLap = false;
             _finishingLap = false;
         }

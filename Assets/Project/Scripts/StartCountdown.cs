@@ -13,6 +13,9 @@ public class StartCountdown : MonoBehaviour
     [SerializeField] private GameObject num2;
     [SerializeField] private GameObject num3;
 
+    [SerializeField] private AudioSource countSound;
+    [SerializeField] private AudioSource startSound;
+
     private bool _raceStarted = false;
 
     private void Start()
@@ -37,20 +40,24 @@ public class StartCountdown : MonoBehaviour
         yield return new WaitForSeconds(waitTime);
 
         num1.SetActive(true);
+        countSound.Play();
 
         yield return new WaitForSeconds(waitTime);
 
         num1.SetActive(false);
         num2.SetActive(true);
+        countSound.Play();
 
         yield return new WaitForSeconds(waitTime);
 
         num2.SetActive(false);
         num3.SetActive(true);
+        countSound.Play();
 
         yield return new WaitForSeconds(waitTime);
 
         num3.SetActive(false);
+        startSound.Play();
         CountdownOver();
     }
     

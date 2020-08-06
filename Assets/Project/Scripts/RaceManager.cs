@@ -12,6 +12,7 @@ public class RaceManager : MonoBehaviour
 
     [SerializeField] private GameObject gameUI;
     [SerializeField] private GameObject raceOverScreen;
+    [SerializeField] private GameObject startScreen;
 
     public GameObject player;
     public int numberOfSpeeders = 6;
@@ -28,6 +29,16 @@ public class RaceManager : MonoBehaviour
     {
         _speeders = new SpeederPlacementData[6];
         Debug.Log(_hasBeenRestarted);
+    }
+
+    private void Start()
+    {
+        if (_hasBeenRestarted)
+        {
+            startScreen.SetActive(false);
+            gameUI.SetActive(true);
+            GetComponent<StartCountdown>().StartRace();
+        }
     }
 
     private void Update()
@@ -96,6 +107,9 @@ public class RaceManager : MonoBehaviour
         raceOverScreen.SetActive(true);
 
         int rank = GetPlayerRanking();
+
+        player.GetComponent<PlayerController>().enabled = false;
+        player.GetComponent<SpeederAI>().enabled = true;
 
         rankingtext.text = "You Got " + rank + raceUI.GetSuffixForNumber(rank) + " Place";
     }

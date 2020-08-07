@@ -10,25 +10,21 @@ public class SpeederMovement : MonoBehaviour
     private SpeederVFX _speederVFX;
     private SpeederAudio _speederAudio;
 
+    private bool _isAccelerating = false;
+    private bool _isTurning = false;
+    private float _turnDirection;
     private float _normalDrag;
 
     public float GetForwardSpeed() { return forwardSpeed; }
     public float GetBreakForce() { return breakForce; }
     public float GetTurnSpeed() { return turnSpeed; }
 
-    public bool IsAccelerating { private get; set; }
-    public bool IsTurning { private get; set; }
-    public float TurnDirection { private get; set; }
-
-    public void StartBreaking()
-    {
-        _rigidbody.drag = breakForce;
-    }
-
-    public void StopBreaking()
-    {
-        _rigidbody.drag = _normalDrag;
-    }
+    public void StartAccelerating() => _isAccelerating = true;
+    public void StopAccelerating() => _isAccelerating = false;
+    public void StartTurning(float direction) { _isTurning = true; _turnDirection = direction; }
+    public void StopTurning() => _isTurning = false;
+    public void StartBreaking() => _rigidbody.drag = breakForce;
+    public void StopBreaking() => _rigidbody.drag = _normalDrag;
 
     private void Awake()
     {
@@ -40,12 +36,12 @@ public class SpeederMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (IsAccelerating)
+        if (_isAccelerating)
             Accelerate();
         else
             NoAccelerate();
 
-        if (IsTurning)
+        if (_isTurning)
             Turn();
         else
             NoTurn();
@@ -66,8 +62,8 @@ public class SpeederMovement : MonoBehaviour
 
     private void Turn()
     {
-        transform.Rotate(Time.deltaTime * turnSpeed * TurnDirection * Vector3.back);
-        _speederVFX.TurnSpeeder(TurnDirection);
+        transform.Rotate(Time.deltaTime * turnSpeed * _turnDirection * Vector3.back);
+        _speederVFX.TurnSpeeder(_turnDirection);
     }
 
     private void NoTurn()

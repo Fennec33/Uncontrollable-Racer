@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class SpeederAI : MonoBehaviour
 {
@@ -38,11 +36,11 @@ public class SpeederAI : MonoBehaviour
 
         if (Vector3.Angle(_vectorToTarget, transform.up) < stopAcceleratingAngle)
         {
-            speeder.IsAccelerating = true;
+            speeder.StartAccelerating();
         }
         else
         {
-            speeder.IsAccelerating = false;
+            speeder.StopAccelerating();
         }
     }
 

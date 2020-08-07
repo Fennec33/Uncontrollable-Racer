@@ -876,7 +876,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c37a228e9c564441be9c9c21718e4f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  highTrigger: 0
+  isHighTrigger: 0
 --- !u!1 &35708771
 GameObject:
   m_ObjectHideFlags: 0
@@ -3745,7 +3745,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c37a228e9c564441be9c9c21718e4f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  highTrigger: 1
+  isHighTrigger: 1
 --- !u!1 &216842261
 GameObject:
   m_ObjectHideFlags: 0
@@ -6152,13 +6152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c37a228e9c564441be9c9c21718e4f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  highTrigger: 0
---- !u!82 &376616874 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 6235933745101025901, guid: 160522abf47fded47a1d82181adae67c,
-    type: 3}
-  m_PrefabInstance: {fileID: 1104716165}
-  m_PrefabAsset: {fileID: 0}
+  isHighTrigger: 0
 --- !u!1 &378531172
 GameObject:
   m_ObjectHideFlags: 0
@@ -9646,12 +9640,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &613028239 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1187864570932032362, guid: 160522abf47fded47a1d82181adae67c,
-    type: 3}
-  m_PrefabInstance: {fileID: 1187864572129073210}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &613076052
 GameObject:
   m_ObjectHideFlags: 0
@@ -10473,12 +10461,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextWaypoint: {fileID: 832295636}
---- !u!82 &657574472 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 6235933745101025901, guid: 160522abf47fded47a1d82181adae67c,
-    type: 3}
-  m_PrefabInstance: {fileID: 982517277}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &667483294
 GameObject:
   m_ObjectHideFlags: 0
@@ -10847,7 +10829,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c37a228e9c564441be9c9c21718e4f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  highTrigger: 1
+  isHighTrigger: 1
 --- !u!1 &684184007
 GameObject:
   m_ObjectHideFlags: 0
@@ -16062,7 +16044,7 @@ PrefabInstance:
     - target: {fileID: 886698444, guid: 160522abf47fded47a1d82181adae67c, type: 3}
       propertyPath: crashSound
       value: 
-      objectReference: {fileID: 657574472}
+      objectReference: {fileID: 0}
     - target: {fileID: 1086555402, guid: 160522abf47fded47a1d82181adae67c, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -16185,6 +16167,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
+    - {fileID: 4132402355702040301, guid: 160522abf47fded47a1d82181adae67c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 160522abf47fded47a1d82181adae67c, type: 3}
 --- !u!114 &982517278 stripped
 MonoBehaviour:
@@ -18354,7 +18337,7 @@ PrefabInstance:
     - target: {fileID: 886698444, guid: 160522abf47fded47a1d82181adae67c, type: 3}
       propertyPath: crashSound
       value: 
-      objectReference: {fileID: 376616874}
+      objectReference: {fileID: 0}
     - target: {fileID: 1086555402, guid: 160522abf47fded47a1d82181adae67c, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -18482,6 +18465,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
+    - {fileID: 4132402355702040301, guid: 160522abf47fded47a1d82181adae67c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 160522abf47fded47a1d82181adae67c, type: 3}
 --- !u!114 &1104716166 stripped
 MonoBehaviour:
@@ -18495,12 +18479,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16165e181b61b1444876529a76397fae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!82 &1109328619 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 6235933745101025901, guid: 160522abf47fded47a1d82181adae67c,
-    type: 3}
-  m_PrefabInstance: {fileID: 2092713965}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1118858605
 GameObject:
   m_ObjectHideFlags: 0
@@ -21552,26 +21530,12 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
---- !u!82 &1272004644 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 6235933745101025901, guid: 160522abf47fded47a1d82181adae67c,
-    type: 3}
-  m_PrefabInstance: {fileID: 2037010716}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1274436467 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1187864570418684804, guid: 160522abf47fded47a1d82181adae67c,
     type: 3}
   m_PrefabInstance: {fileID: 1187864572129073210}
   m_PrefabAsset: {fileID: 0}
---- !u!81 &1274436468
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1274436467}
-  m_Enabled: 1
 --- !u!114 &1274436473 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1187864570418684922, guid: 160522abf47fded47a1d82181adae67c,
@@ -25477,12 +25441,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!82 &1475143489 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 6235933745101025901, guid: 160522abf47fded47a1d82181adae67c,
-    type: 3}
-  m_PrefabInstance: {fileID: 2055183741}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1481144828
 GameObject:
   m_ObjectHideFlags: 0
@@ -31548,7 +31506,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c37a228e9c564441be9c9c21718e4f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  highTrigger: 1
+  isHighTrigger: 1
 --- !u!1 &1829253619
 GameObject:
   m_ObjectHideFlags: 0
@@ -35987,7 +35945,7 @@ PrefabInstance:
     - target: {fileID: 886698444, guid: 160522abf47fded47a1d82181adae67c, type: 3}
       propertyPath: crashSound
       value: 
-      objectReference: {fileID: 1272004644}
+      objectReference: {fileID: 0}
     - target: {fileID: 1086555402, guid: 160522abf47fded47a1d82181adae67c, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -36115,6 +36073,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
+    - {fileID: 4132402355702040301, guid: 160522abf47fded47a1d82181adae67c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 160522abf47fded47a1d82181adae67c, type: 3}
 --- !u!114 &2037010717 stripped
 MonoBehaviour:
@@ -36474,7 +36433,7 @@ PrefabInstance:
     - target: {fileID: 886698444, guid: 160522abf47fded47a1d82181adae67c, type: 3}
       propertyPath: crashSound
       value: 
-      objectReference: {fileID: 1475143489}
+      objectReference: {fileID: 0}
     - target: {fileID: 886698445, guid: 160522abf47fded47a1d82181adae67c, type: 3}
       propertyPath: spreadCustomCurve.m_Curve.Array.data[0].value
       value: 0
@@ -36599,7 +36558,8 @@ PrefabInstance:
       propertyPath: m_Color.b
       value: 0.37415743
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4132402355702040301, guid: 160522abf47fded47a1d82181adae67c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 160522abf47fded47a1d82181adae67c, type: 3}
 --- !u!114 &2055183742 stripped
 MonoBehaviour:
@@ -37327,7 +37287,7 @@ PrefabInstance:
     - target: {fileID: 886698444, guid: 160522abf47fded47a1d82181adae67c, type: 3}
       propertyPath: crashSound
       value: 
-      objectReference: {fileID: 1109328619}
+      objectReference: {fileID: 0}
     - target: {fileID: 1086555402, guid: 160522abf47fded47a1d82181adae67c, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -37450,6 +37410,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
+    - {fileID: 4132402355702040301, guid: 160522abf47fded47a1d82181adae67c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 160522abf47fded47a1d82181adae67c, type: 3}
 --- !u!114 &2092713966 stripped
 MonoBehaviour:
@@ -38342,27 +38303,18 @@ PrefabInstance:
       propertyPath: startingWaypoint
       value: 
       objectReference: {fileID: 1495052693}
-    - target: {fileID: 1274436468, guid: 160522abf47fded47a1d82181adae67c, type: 3}
-      propertyPath: pathCreator
+    - target: {fileID: 886698444, guid: 160522abf47fded47a1d82181adae67c, type: 3}
+      propertyPath: engineSound
       value: 
-      objectReference: {fileID: 1244848743}
-    - target: {fileID: 1274436468, guid: 160522abf47fded47a1d82181adae67c, type: 3}
-      propertyPath: raceManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 886698444, guid: 160522abf47fded47a1d82181adae67c, type: 3}
+      propertyPath: crashSound
       value: 
-      objectReference: {fileID: 1866557678}
-    - target: {fileID: 1274436469, guid: 160522abf47fded47a1d82181adae67c, type: 3}
-      propertyPath: speederArt
-      value: 
-      objectReference: {fileID: 613028239}
+      objectReference: {fileID: 0}
     - target: {fileID: 1187864570418684804, guid: 160522abf47fded47a1d82181adae67c,
         type: 3}
       propertyPath: m_Name
       value: Speeder
-      objectReference: {fileID: 0}
-    - target: {fileID: 1187864570418684804, guid: 160522abf47fded47a1d82181adae67c,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1187864570418684805, guid: 160522abf47fded47a1d82181adae67c,
         type: 3}

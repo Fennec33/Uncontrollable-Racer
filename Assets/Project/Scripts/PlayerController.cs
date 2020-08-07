@@ -42,34 +42,10 @@ public class PlayerController : MonoBehaviour
         _controlls.Player.Turn.Disable();
     }
 
-    private void AccelerateOn(InputAction.CallbackContext context)
-    {
-        _speederMovement.IsAccelerating = true;
-    }
-
-    private void AccelerateOff(InputAction.CallbackContext context)
-    {
-        _speederMovement.IsAccelerating = false;
-    }
-
-    private void TurnOn(InputAction.CallbackContext context)
-    {
-        _speederMovement.TurnDirection = context.ReadValue<float>();
-        _speederMovement.IsTurning = true;
-    }
-
-    private void TurnOff(InputAction.CallbackContext context)
-    {
-        _speederMovement.IsTurning = false;
-    }
-
-    private void BreakOn(InputAction.CallbackContext context)
-    {
-        _speederMovement.StartBreaking();
-    }
-
-    private void BreakOff(InputAction.CallbackContext context)
-    {
-        _speederMovement.StopBreaking();
-    }
+    private void AccelerateOn(InputAction.CallbackContext context) =>_speederMovement.StartAccelerating();
+    private void AccelerateOff(InputAction.CallbackContext context) => _speederMovement.StopAccelerating();
+    private void TurnOn(InputAction.CallbackContext context) => _speederMovement.StartTurning(context.ReadValue<float>());
+    private void TurnOff(InputAction.CallbackContext context) => _speederMovement.StopTurning();
+    private void BreakOn(InputAction.CallbackContext context) => _speederMovement.StartBreaking();
+    private void BreakOff(InputAction.CallbackContext context) => _speederMovement.StopBreaking();
 }

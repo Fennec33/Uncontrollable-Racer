@@ -51,13 +51,6 @@ public class LapTracker : MonoBehaviour
         }
     }
 
-    public void PausePositionUpdate()
-    {
-        _pausePositionUpdate = true;
-    }
-
-    public void UnpausePositionUpdate()
-    {
-        _pausePositionUpdate = false;
-    }
+    public void PausePositionUpdate() => _pausePositionUpdate = true;
+    public void UnpausePositionUpdate() => _pausePositionUpdate = false;
 }

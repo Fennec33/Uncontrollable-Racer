@@ -11,28 +11,9 @@
         _lap = 0;
     }
 
-    public int GetID()
-    {
-        return _id;
-    }
-
-    public float GetPosition()
-    {
-        return _position;
-    }
-
-    public void SetPosition(float newPosition)
-    {
-        _position = newPosition;
-    }
-
-    public int GetLap()
-    {
-        return _lap;
-    }
-
-    public void IncreaseLap()
-    {
-        _lap++;
-    }
+    public int GetID() => _id;
+    public float GetPosition() => _position;
+    public void SetPosition(float newPosition) => _position = newPosition;
+    public int GetLap() => _lap;
+    public void IncreaseLap() => _lap++;
 }

@@ -6,7 +6,7 @@ public class SpeederVFX : MonoBehaviour
     [SerializeField] private float tiltSpeed = 150f;
     [SerializeField] private float delayTimeBetweenCrashSparks = 1;
 
-    [SerializeField] private GameObject collisionSpark;
+    [SerializeField] private CollisionSpark collisionSpark;
 
     private GameObject _flames;
 
@@ -55,7 +55,7 @@ public class SpeederVFX : MonoBehaviour
     {
         if (_timeSinceLastCrash >= delayTimeBetweenCrashSparks)
         {
-            Instantiate(collisionSpark, contact.point, Quaternion.identity);
+            collisionSpark.Spark(contact.point, Quaternion.identity);
             _timeSinceLastCrash = 0f;
         }
     }

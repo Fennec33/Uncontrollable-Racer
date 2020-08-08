@@ -10110,6 +10110,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Speeder AI Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 7857303186390162138, guid: 6c460f5199c69b04fadce3d45a1605fe,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7857303186390162139, guid: 6c460f5199c69b04fadce3d45a1605fe,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -18174,6 +18179,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Speeder AI Variant (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7857303186390162138, guid: 6c460f5199c69b04fadce3d45a1605fe,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7857303186390162139, guid: 6c460f5199c69b04fadce3d45a1605fe,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -19273,6 +19283,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Speeder AI Variant (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7857303186390162138, guid: 6c460f5199c69b04fadce3d45a1605fe,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7857303186390162139, guid: 6c460f5199c69b04fadce3d45a1605fe,
         type: 3}
@@ -20438,6 +20453,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Speeder AI Variant (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7857303186390162138, guid: 6c460f5199c69b04fadce3d45a1605fe,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7857303186390162139, guid: 6c460f5199c69b04fadce3d45a1605fe,
         type: 3}
@@ -32515,7 +32535,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e96094649c3100e4c9b7262c73c8b021, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numberOfLaps: 3
+  numberOfLaps: 2
   raceUI: {fileID: 135014959}
   rankingtext: {fileID: 1075123906}
   gameUI: {fileID: 135014954}
@@ -36162,6 +36182,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Speeder AI Variant (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7857303186390162138, guid: 6c460f5199c69b04fadce3d45a1605fe,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7857303186390162139, guid: 6c460f5199c69b04fadce3d45a1605fe,
         type: 3}

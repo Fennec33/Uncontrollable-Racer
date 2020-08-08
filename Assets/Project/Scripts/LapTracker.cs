@@ -14,9 +14,10 @@ public class LapTracker : MonoBehaviour
     {
         _id = RaceManager.Instance.RequestNewID(this.gameObject);
         _trackPath = FindObjectOfType<PathCreator>();
+        InvokeRepeating("UpdatePositionOnPath", _id/10f, 1f);
     }
 
-    void Update()
+    private void UpdatePositionOnPath()
     {
         if (_pausePositionUpdate) return;
 

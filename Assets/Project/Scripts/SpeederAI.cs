@@ -5,6 +5,7 @@ public class SpeederAI : MonoBehaviour
     [SerializeField] private SpeederMovement speeder;
     [SerializeField] private Transform startingWaypoint;
     [SerializeField] private float stopAcceleratingAngle = 40;
+    [SerializeField] private float randomWaypointShiftRange = 1f;
     
     private Vector3 _currentWaypoint;
     private Vector3 _vectorToTarget;
@@ -44,8 +45,17 @@ public class SpeederAI : MonoBehaviour
         }
     }
 
-    public void SetNewWaypoint(Transform newPoint)
+    public void SetNewWaypoint(Transform point)
     {
-        _currentWaypoint = newPoint.position;
+        _currentWaypoint = point.position;
+        _currentWaypoint = RandomlyShiftPoint(_currentWaypoint);
+    }
+
+    private Vector3 RandomlyShiftPoint(Vector3 point)
+    {
+        point.x += Random.Range(-randomWaypointShiftRange, randomWaypointShiftRange);
+        point.y += Random.Range(-randomWaypointShiftRange, randomWaypointShiftRange);
+
+        return point;
     }
 }

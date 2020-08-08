@@ -10170,6 +10170,11 @@ PrefabInstance:
       propertyPath: startingWaypoint
       value: 
       objectReference: {fileID: 1495052693}
+    - target: {fileID: 9040583824252470430, guid: 6c460f5199c69b04fadce3d45a1605fe,
+        type: 3}
+      propertyPath: randomWaypointShiftRange
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6c460f5199c69b04fadce3d45a1605fe, type: 3}
 --- !u!1 &636053055
@@ -18244,6 +18249,11 @@ PrefabInstance:
       propertyPath: startingWaypoint
       value: 
       objectReference: {fileID: 1495052693}
+    - target: {fileID: 9040583824252470430, guid: 6c460f5199c69b04fadce3d45a1605fe,
+        type: 3}
+      propertyPath: randomWaypointShiftRange
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6c460f5199c69b04fadce3d45a1605fe, type: 3}
 --- !u!1 &1118858605
@@ -19359,6 +19369,11 @@ PrefabInstance:
       propertyPath: startingWaypoint
       value: 
       objectReference: {fileID: 1495052693}
+    - target: {fileID: 9040583824252470430, guid: 6c460f5199c69b04fadce3d45a1605fe,
+        type: 3}
+      propertyPath: randomWaypointShiftRange
+      value: 1.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6c460f5199c69b04fadce3d45a1605fe, type: 3}
 --- !u!1 &1177934174
@@ -20499,6 +20514,11 @@ PrefabInstance:
       propertyPath: startingWaypoint
       value: 
       objectReference: {fileID: 1495052693}
+    - target: {fileID: 9040583824252470430, guid: 6c460f5199c69b04fadce3d45a1605fe,
+        type: 3}
+      propertyPath: randomWaypointShiftRange
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6c460f5199c69b04fadce3d45a1605fe, type: 3}
 --- !u!1 &1221711548
@@ -36218,6 +36238,11 @@ PrefabInstance:
       propertyPath: startingWaypoint
       value: 
       objectReference: {fileID: 1495052693}
+    - target: {fileID: 9040583824252470430, guid: 6c460f5199c69b04fadce3d45a1605fe,
+        type: 3}
+      propertyPath: randomWaypointShiftRange
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6c460f5199c69b04fadce3d45a1605fe, type: 3}
 --- !u!1 &2054160614
@@ -37884,6 +37909,10 @@ PrefabInstance:
       propertyPath: startingWaypoint
       value: 
       objectReference: {fileID: 1495052693}
+    - target: {fileID: 183598528, guid: 160522abf47fded47a1d82181adae67c, type: 3}
+      propertyPath: randomWaypointShiftRange
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1187864570418684804, guid: 160522abf47fded47a1d82181adae67c,
         type: 3}
       propertyPath: m_Name
